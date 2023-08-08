@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "211575246840",
+    "project_id": "numberotp-bfcb0",
+    "storage_bucket": "numberotp-bfcb0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211575246840:android:1752108fc86d7a4a19d00d",
+        "android_client_info": {
+          "package_name": "com.example.citisers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "211575246840-dgivb2i6ocufcm7f9rrvg02i97m6vlbs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpM4EhJxKYmck3moJG2fX-YSH2LOtRt3k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "211575246840-dgivb2i6ocufcm7f9rrvg02i97m6vlbs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
