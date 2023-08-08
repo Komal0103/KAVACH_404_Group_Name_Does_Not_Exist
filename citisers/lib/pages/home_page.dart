@@ -189,9 +189,9 @@ class _home_pageState extends State<home_page> {
               elevation: 10,
               shadowColor: hexStringToColor("57C5B6"),
               child: ListTile(
-                leading: Icon(Icons.info),
-                title: Text('About'),
-                subtitle: Text('Learn more about us'),
+                leading: Icon(Icons.contact_mail),
+                title: Text('Conatct us'),
+                subtitle: Text('Get in touch with us'),
                 onTap: () {
                   Navigator.pop(context);
                 },
@@ -252,94 +252,402 @@ class _home_pageState extends State<home_page> {
         children: [
           SingleChildScrollView(
             child: Container(
-              alignment: Alignment.center,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Container(
-                    height: 35,
-                    width: double.infinity,
-                    child: Marquee(
-                      text: 'This is an infinte scrolling text',
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.underline),
-                      scrollAxis: Axis.horizontal,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      blankSpace: 20.0,
-                      velocity: 100.0,
-                      pauseAfterRound: Duration(seconds: 1),
-                      startPadding: 0,
-                      accelerationDuration: Duration(seconds: 1),
-                      accelerationCurve: Curves.linear,
-                      decelerationDuration: Duration(milliseconds: 500),
-                      decelerationCurve: Curves.easeOut,
+                alignment: Alignment.center,
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      height: 25,
+                      width: double.infinity,
+                      child: Marquee(
+                        text: 'This is an infinte scrolling text',
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.underline),
+                        scrollAxis: Axis.horizontal,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        blankSpace: 20.0,
+                        velocity: 100.0,
+                        pauseAfterRound: Duration(seconds: 1),
+                        startPadding: 0,
+                        accelerationDuration: Duration(seconds: 1),
+                        accelerationCurve: Curves.linear,
+                        decelerationDuration: Duration(milliseconds: 500),
+                        decelerationCurve: Curves.easeOut,
+                      ),
                     ),
-                  ),
-                  Row(
-                    children: [
-                      Container(
-                        alignment: Alignment.center,
-                        child: InkWell(
-                          onTap: () {},
-                          child: Text("hello"),
+                    Material(
+                      color: Colors.deepOrange[50],
+                      child: InkWell(
+                        onTap: () async {
+                          // Navigator.pushNamed(context, studentAccountRoute);
+                        },
+                        child: AnimatedContainer(
+                          duration: const Duration(seconds: 0),
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.rectangle,
+                            color: Color.fromARGB(219, 124, 5, 5),
+                            borderRadius: BorderRadius.zero,
+                          ),
+                          height: 200,
+                          width: 500,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                'Welcome to \nVJTI Maps',
+                                maxLines: 2,
+                                overflow: TextOverflow.fade,
+                                style: const TextStyle(
+                                  fontSize: 25,
+                                  // fontFamily: 'Poppins',
+                                  color: Colors.white,
+                                ),
+                              ),
+                              const SizedBox(width: 10),
+                              CircleAvatar(
+                                backgroundImage:
+                                    AssetImage('assets/VJTilogoforappbar.jpeg'),
+                                radius: 70,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                      Spacer(),
-                      Container(
-                        color: Colors.red,
-                        height: 178,
-                        width: 178,
+                    ),
+                    const SizedBox(height: 30),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        // SENIORS' ADVICE
+                        Material(
+                          color: Colors.deepOrange[50],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(19),
+                            side: const BorderSide(color: Colors.transparent),
+                          ),
+                          child: InkWell(
+                            splashColor: Colors.transparent,
+                            onTap: () async {
+                              // final userdata = await userDetails();
+                              // Navigator.pushNamed(context, seniorAdviceRoute,
+                              //     arguments: userdata);
+                            },
+                            child: Center(
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      border: Border.all(width: 2),
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                    child: Image.asset(
+                                      'assets/challan.png',
+                                      height: 100,
+                                      width: 100,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  const Text(
+                                    '  My E-Challans  ',
+                                    style: TextStyle(
+                                      // fontFamily: 'Poppins',
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+
+                        const SizedBox(width: 80),
+                        // EXTRA CURRICULARS
+                        Material(
+                          color: Colors.deepOrange[50],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(19),
+                            side: const BorderSide(color: Colors.transparent),
+                          ),
+                          child: InkWell(
+                            splashColor: Colors.transparent,
+                            onTap: () {
+                              // Navigator.pushNamed();
+                              // context, extracurricularsRoute);
+                            },
+                            child: Center(
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      border: Border.all(width: 2),
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                    child: Image.asset(
+                                      'assets/accident_report.png',
+                                      height: 100,
+                                      width: 100,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  const Text(
+                                    'Report an Accident',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      // fontFamily: 'Poppins',
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 50),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        // NOTES & PYQS
+                        Material(
+                          color: Colors.deepOrange[50],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(19),
+                            side: const BorderSide(color: Colors.transparent),
+                          ),
+                          child: InkWell(
+                            splashColor: Colors.transparent,
+                            onTap: () {
+                              // Navigator.of(context).pushNamed(notesAndPyqRoute);
+                            },
+                            child: Center(
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      border: Border.all(width: 2),
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                    child: Image.asset(
+                                      'assets/Pay_E_Challan.png',
+                                      fit: BoxFit.fill,
+                                      height: 100,
+                                      width: 100,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  const Text(
+                                    'Pay E-Challan',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      // fontFamily: 'Poppins',
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+
+                        const SizedBox(width: 80),
+                        // ABOUT VJTI
+                        Material(
+                          color: Colors.deepOrange[50],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(19),
+                            side: const BorderSide(color: Colors.transparent),
+                          ),
+                          child: InkWell(
+                            splashColor: Colors.transparent,
+                            onTap: () {
+                              // Navigator.pushNamed(context, aboutVJTIRoute);
+                            },
+                            child: Center(
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      border: Border.all(width: 2),
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                    child: Image.asset(
+                                      'assets/Girevances.png',
+                                      fit: BoxFit.fill,
+                                      height: 100,
+                                      width: 100,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  const Text(
+                                    'Grievances',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      // fontFamily: 'Poppins',
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 50),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        // GALLERY
+                        Material(
+                          color: Colors.deepOrange[50],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(19),
+                            side: const BorderSide(color: Colors.transparent),
+                          ),
+                          child: InkWell(
+                            splashColor: Colors.transparent,
+                            onTap: () {
+                              // const url = 'https://play.google.com/store/apps/details?id=com.raviowl.vjtimaps';
+                              // launch(url);
+                            },
+                            child: Center(
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      border: Border.all(width: 2),
+                                      borderRadius: BorderRadius.circular(5),
+                                      color: Colors.white,
+                                    ),
+                                    child: Image.asset(
+                                      'assets/about_us.png',
+                                      fit: BoxFit.fill,
+                                      height: 100,
+                                      width: 100,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  const Text(
+                                    'About Us',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      // fontFamily: 'Poppins',
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+
+                        const SizedBox(width: 80),
+                        // HOW TO GET VJTI
+                        Material(
+                          color: Colors.deepOrange[50],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(19),
+                            side: const BorderSide(color: Colors.transparent),
+                          ),
+                          child: InkWell(
+                            splashColor: Colors.transparent,
+                            onTap: () {
+                              // Navigator.pushNamed(context, howToGetVJTIRoute);
+                            },
+                            child: Center(
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      border: Border.all(width: 2),
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                    child: Image.asset(
+                                      'assets/howtoget.png',
+                                      fit: BoxFit.fill,
+                                      height: 100,
+                                      width: 100,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  const Text(
+                                    'How to get \nVJTI',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      // fontFamily: 'Poppins',
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 40),
+                    Material(
+                      color: Colors.deepOrange[50],
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(19),
+                        side: const BorderSide(color: Colors.transparent),
                       ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Container(
-                        color: Colors.pink,
-                        height: 178,
-                        width: 178,
+                      child: InkWell(
+                        splashColor: Colors.transparent,
+                        onTap: () {
+                          // Navigator.pushNamed(context, mapOfVJTIRoute);
+                        },
+                        child: Center(
+                          child: Column(
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                  border: Border.all(width: 2),
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                                child: Image.asset(
+                                  'assets/VJTITopView.png',
+                                  fit: BoxFit.fill,
+                                  height: 100,
+                                  width: 100,
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              const Text(
+                                'Map of \nVJTI',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  // fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
-                      Spacer(),
-                      Container(
-                        color: Colors.orange,
-                        height: 178,
-                        width: 178,
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Container(
-                        color: Colors.green,
-                        height: 178,
-                        width: 178,
-                      ),
-                      Spacer(),
-                      Container(
-                        color: Colors.yellow,
-                        height: 178,
-                        width: 178,
-                      ),
-                    ],
-                  ),
-                  Container(
-                    color: Colors.indigo,
-                    height: 100,
-                    width: 100,
-                  ),
-                  Container(
-                    color: Colors.white,
-                    height: 100,
-                    width: 100,
-                  )
-                ],
-              ),
-            ),
+                    ),
+                    const SizedBox(height: 50),
+                  ],
+                )),
           ),
           SlidingUpPanel(
             panel: SingleChildScrollView(

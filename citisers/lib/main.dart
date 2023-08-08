@@ -1,4 +1,3 @@
-import 'package:citisers/pages/admin_login_page.dart';
 import 'package:citisers/pages/home_page.dart';
 import 'package:citisers/pages/number_page.dart';
 import 'package:citisers/pages/otp_page.dart';
@@ -37,7 +36,6 @@ class _main_pageState extends State<main_page> {
               'otp_page': (context) => otp_page(),
               'home_page': (context) => home_page(),
               'setting_page': (context) => setting_page(),
-              'admin_login': (context) => admin_login(),
             },
           );
         },
