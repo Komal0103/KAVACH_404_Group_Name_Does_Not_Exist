@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "ipfs": "^0.66.1",
+    "ipfs-api": "^26.1.2"
+  }
+}
