@@ -7,7 +7,7 @@
 - [Tech Stack](#tech-stack)
 - [Scope](#scope)
 - [Methods](#methods)
-- [Face Detection In OpenCV](#face-detection-&-face-recognition)
+- [Face Detection & Face Recognition](#face-detection-&-face-recognition)
 - [EasyOCR](#easyocr)
 - [Team Members](#team-members)
 - [Links](#links)
