@@ -14,6 +14,9 @@
 
 ## 📝Description
 This is one of the unique projects done by a team of six members which inludes the domain of **video analytics and CCTV**. In this prroject, we extensively used the **computer vision and the image processing** technologies using various in-built modules and libraries of **Python** programming language. As a part of our attempt to the **KAVACH 2023 - The Cybersecurity Hackathon**, we tried to advance the existing technologies by adding few valuable edits.
+- [Idea Template](https://github.com/Komal0103/KAVACH_404_Group_Name_Does_Not_Exist/blob/main/Kavach%20Idea%20Template.pdf)
+- [Project Proposal](https://github.com/Komal0103/KAVACH_404_Group_Name_Does_Not_Exist/blob/main/Project_Proposal_DOC.pdf)
+- [Final Idea Presentation](https://github.com/Komal0103/KAVACH_404_Group_Name_Does_Not_Exist/blob/main/Advanced%20ANPR%20%26%20FRS%20Solution.pdf)
 
 ## 🤖Tech-Stack
 <img src="https://user-images.githubusercontent.com/119912993/232730672-d59fe837-5073-48f5-8fc0-6d98ff0bccfe.png" height=100 width=100> &nbsp;
